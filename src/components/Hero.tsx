@@ -1,136 +1,116 @@
 export default function Hero() {
-  const utpItems = [
-    {
-      icon: (
-        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-      ),
-      text: "Опыт работы с генподрядчиками",
-    },
-    {
-      icon: (
-        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
-      text: "Соблюдение сроков",
-    },
-    {
-      icon: (
-        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-        </svg>
-      ),
-      text: "Контроль качества",
-    },
-  ];
-
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center bg-[#1A1A1A] overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center bg-[#0B0B0B] overflow-hidden"
     >
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `repeating-linear-gradient(
-              0deg,
-              transparent,
-              transparent 40px,
-              rgba(255,255,255,0.3) 40px,
-              rgba(255,255,255,0.3) 41px
-            ), repeating-linear-gradient(
-              90deg,
-              transparent,
-              transparent 40px,
-              rgba(255,255,255,0.3) 40px,
-              rgba(255,255,255,0.3) 41px
-            )`,
-          }}
-        />
+      {/* Blueprint grid */}
+      <div
+        className="absolute inset-0 opacity-[0.04]"
+        style={{
+          backgroundImage: `linear-gradient(rgba(80,200,224,1) 1px, transparent 1px), linear-gradient(90deg, rgba(80,200,224,1) 1px, transparent 1px)`,
+          backgroundSize: "80px 80px",
+        }}
+      />
+
+      {/* Giant watermark */}
+      <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none select-none">
+        <span
+          className="font-display font-bold text-white/[0.018] uppercase whitespace-nowrap"
+          style={{ fontSize: "clamp(6rem, 20vw, 18rem)", letterSpacing: "-0.03em" }}
+        >
+          МЕГАСТРОЙ
+        </span>
       </div>
 
-      {/* Orange accent line */}
-      <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#50C8E0]" />
+      {/* Left cyan accent */}
+      <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-[#50C8E0]" />
 
       {/* Content */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-        <div className="max-w-3xl">
-          {/* Tag */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#50C8E0]/15 border border-[#50C8E0]/30 rounded text-[#50C8E0] text-xs font-medium mb-6 uppercase tracking-widest">
-            <span className="w-1.5 h-1.5 bg-[#50C8E0] rounded-full animate-pulse" />
-            Работаем с 2018 года
-          </div>
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 w-full pt-28 pb-16">
 
-          {/* Heading */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-            Кладочные и отделочные работы{" "}
-            <span className="text-[#50C8E0]">для застройщиков</span>
-          </h1>
+        {/* Label row */}
+        <div className="fade-up flex items-center gap-4 mb-10">
+          <span className="w-8 h-[1px] bg-[#50C8E0]" />
+          <span className="font-technical text-[#50C8E0] text-xs uppercase tracking-[0.3em]">
+            ООО Мегастрой · Москва · с 2018 года
+          </span>
+        </div>
 
-          {/* Subheading */}
-          <p className="text-lg sm:text-xl text-white/60 mb-10 leading-relaxed max-w-2xl">
-            Надёжный подрядчик для крупных строительных проектов. Работаем с
-            генподрядными организациями, соблюдаем сроки и обеспечиваем
-            качество.
+        {/* Main headline */}
+        <h1 className="fade-up-2 font-display font-bold text-white mb-2 leading-none">
+          <span className="block" style={{ fontSize: "clamp(2.8rem, 9vw, 8rem)" }}>
+            КЛАДОЧНЫЕ
+          </span>
+          <span className="block" style={{ fontSize: "clamp(2.8rem, 9vw, 8rem)" }}>
+            И ОТДЕЛОЧНЫЕ
+          </span>
+          <span
+            className="block text-[#50C8E0]"
+            style={{ fontSize: "clamp(2.8rem, 9vw, 8rem)" }}
+          >
+            РАБОТЫ
+          </span>
+        </h1>
+
+        {/* Ruled separator */}
+        <div className="fade-up-3 w-full h-[1px] bg-white/10 my-8" />
+
+        {/* Subheading + CTA row */}
+        <div className="fade-up-3 flex flex-col lg:flex-row lg:items-end gap-8 lg:gap-16 mb-16">
+          <p className="font-technical text-white/45 text-sm leading-relaxed max-w-md">
+            Надёжный субподрядчик для застройщиков и генподрядных организаций.
+            Кирпичная кладка, отделка, внутренние работы под ключ.
+            Работаем по договору — соблюдаем сроки и стандарты качества.
           </p>
 
-          {/* UTP items */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-10">
-            {utpItems.map((item, idx) => (
-              <div key={idx} className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-[#50C8E0]/20 rounded flex items-center justify-center text-[#50C8E0] shrink-0">
-                  {item.icon}
-                </div>
-                <span className="text-white/80 text-sm">{item.text}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-3">
             <a
               href="#contacts"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#50C8E0] hover:bg-[#6DD5E8] text-white font-semibold rounded transition-all hover:shadow-lg hover:shadow-[#50C8E0]/25 active:scale-[0.98]"
+              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#50C8E0] hover:bg-[#72D8ED] text-[#0B0B0B] font-technical font-bold text-xs uppercase tracking-[0.15em] transition-colors"
             >
-              Связаться с нами
+              Обсудить объект
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
             <a
-              href="tel:+7XXXXXXXXXX"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 hover:border-white/40 text-white/80 hover:text-white font-medium rounded transition-colors"
+              href="#services"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/15 hover:border-white/30 text-white/55 hover:text-white font-technical text-xs uppercase tracking-[0.15em] transition-colors"
             >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              Позвонить
+              Наши услуги
             </a>
           </div>
         </div>
 
-        {/* Stats */}
-        <div className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-6 pt-10 border-t border-white/10">
+        {/* Stats — editorial ruled blocks */}
+        <div className="fade-up-5 grid grid-cols-2 sm:grid-cols-4 border-t border-white/10">
           {[
             { value: "6+", label: "лет на рынке" },
-            { value: "50+", label: "реализованных объектов" },
+            { value: "50+", label: "объектов сдано" },
             { value: "100%", label: "работа по договору" },
             { value: "0", label: "срывов сроков" },
           ].map((stat, idx) => (
-            <div key={idx}>
-              <div className="text-3xl font-bold text-[#50C8E0]">{stat.value}</div>
-              <div className="text-white/50 text-sm mt-1">{stat.label}</div>
+            <div
+              key={idx}
+              className="border-r border-white/10 last:border-r-0 px-6 pt-6 pb-2 first:pl-0"
+            >
+              <div
+                className="font-display font-bold text-[#50C8E0] leading-none mb-2"
+                style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)" }}
+              >
+                {stat.value}
+              </div>
+              <div className="font-technical text-white/35 text-xs uppercase tracking-[0.2em]">
+                {stat.label}
+              </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Bottom gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white/5 to-transparent pointer-events-none" />
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#0B0B0B]/60 to-transparent pointer-events-none" />
     </section>
   );
 }

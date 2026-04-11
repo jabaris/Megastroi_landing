@@ -1,83 +1,115 @@
 const services = [
   {
+    num: "01",
     title: "Кладочные работы",
     desc: "Кирпичная и блочная кладка стен, перегородок и несущих конструкций. Работаем с различными материалами в соответствии с проектной документацией.",
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-      </svg>
-    ),
+    tags: ["Кирпич", "Газоблок", "Керамоблок"],
   },
   {
+    num: "02",
     title: "Отделочные работы",
     desc: "Штукатурка, шпаклёвка, облицовка поверхностей. Финишная отделка квартир, офисов и коммерческих помещений под ключ.",
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-      </svg>
-    ),
+    tags: ["Штукатурка", "Шпаклёвка", "Облицовка"],
   },
   {
+    num: "03",
     title: "Внутренние строительные работы",
     desc: "Устройство перегородок, монтаж оконных и дверных блоков, заливка стяжки пола, работы по обустройству инженерных систем.",
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-      </svg>
-    ),
+    tags: ["Стяжка пола", "Перегородки", "Монтаж блоков"],
   },
   {
+    num: "04",
     title: "Подготовка помещений",
-    desc: "Демонтажные работы, выравнивание поверхностей, подготовка оснований под финишную отделку. Работы выполняются согласно технологическим регламентам.",
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
+    desc: "Демонтажные работы, выравнивание поверхностей, подготовка оснований под финишную отделку. Строго по технологическим регламентам.",
+    tags: ["Демонтаж", "Выравнивание", "Подготовка"],
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 lg:py-28 bg-[#F5F6F8]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <div className="text-[#50C8E0] text-sm font-semibold uppercase tracking-widest mb-4">
-            Наши услуги
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A]">
-            Виды выполняемых работ
-          </h2>
-        </div>
+    <section id="services" className="py-24 lg:py-32 bg-[#0B0B0B]">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-lg p-6 border border-[#E5E7EB] hover:border-[#50C8E0]/40 hover:shadow-md transition-all group"
-            >
-              <div className="w-12 h-12 bg-[#1A1A1A] group-hover:bg-[#50C8E0] rounded-lg flex items-center justify-center text-white mb-5 transition-colors">
-                {service.icon}
-              </div>
-              <h3 className="font-bold text-[#1A1A1A] mb-3">{service.title}</h3>
-              <p className="text-[#6B7280] text-sm leading-relaxed">
-                {service.desc}
-              </p>
+        {/* Header row */}
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-16 border-b border-white/10 pb-8">
+          <div>
+            <div className="flex items-center gap-4 mb-4">
+              <span className="w-8 h-[1px] bg-[#50C8E0]" />
+              <span className="font-technical text-[#50C8E0] text-xs uppercase tracking-[0.25em]">
+                Наши услуги
+              </span>
             </div>
-          ))}
-        </div>
-
-        <div className="mt-10 text-center">
+            <h2
+              className="font-display font-bold text-white leading-none"
+              style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
+            >
+              ВИДЫ ВЫПОЛНЯЕМЫХ<br />
+              <span className="text-[#50C8E0]">РАБОТ</span>
+            </h2>
+          </div>
           <a
             href="#contacts"
-            className="inline-flex items-center gap-2 text-[#50C8E0] font-medium hover:underline text-sm"
+            className="self-start sm:self-end inline-flex items-center gap-2 font-technical text-[#50C8E0] text-xs uppercase tracking-[0.15em] border-b border-[#50C8E0]/40 hover:border-[#50C8E0] pb-0.5 transition-colors whitespace-nowrap"
           >
-            Обсудить объёмы работ
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            Обсудить объёмы
+            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
+        </div>
+
+        {/* Services grid */}
+        <div className="grid sm:grid-cols-2 gap-0">
+          {services.map((service, idx) => (
+            <div
+              key={idx}
+              className="group border border-white/8 hover:border-[#50C8E0]/30 p-8 transition-colors relative overflow-hidden"
+            >
+              {/* Hover fill */}
+              <div className="absolute inset-0 bg-white/[0.02] opacity-0 group-hover:opacity-100 transition-opacity" />
+
+              {/* Number */}
+              <div
+                className="font-display font-bold text-white/[0.06] leading-none absolute -top-4 right-4 select-none pointer-events-none"
+                style={{ fontSize: "7rem" }}
+              >
+                {service.num}
+              </div>
+
+              {/* Cyan number */}
+              <div className="font-technical text-[#50C8E0] text-xs font-bold uppercase tracking-[0.2em] mb-6">
+                {service.num}
+              </div>
+
+              {/* Title */}
+              <h3
+                className="font-display font-bold text-white leading-none mb-4"
+                style={{ fontSize: "clamp(1.4rem, 3vw, 2rem)" }}
+              >
+                {service.title}
+              </h3>
+
+              {/* Divider */}
+              <div className="w-8 h-[2px] bg-[#50C8E0] mb-4 group-hover:w-16 transition-all duration-300" />
+
+              {/* Description */}
+              <p className="font-technical text-white/40 text-sm leading-relaxed mb-6">
+                {service.desc}
+              </p>
+
+              {/* Tags */}
+              <div className="flex flex-wrap gap-2">
+                {service.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="font-technical text-white/30 text-xs uppercase tracking-wider border border-white/10 px-3 py-1"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -1,56 +1,81 @@
 const partners = [
-  { name: 'ООО "РЕГИОНЖИЛСТРОЙ"', type: "Генподрядная организация" },
-  { name: 'ООО "Квадро"', type: "Генподрядная организация / Застройщик" },
-  { name: "Фонд реновации", type: "Застройщик" },
+  { name: 'РЕГИОНЖИЛСТРОЙ', full: 'ООО "РЕГИОНЖИЛСТРОЙ"', type: "Генподрядная организация" },
+  { name: 'КВАДРО', full: 'ООО "Квадро"', type: "Генподрядная организация / Застройщик" },
+  { name: 'ФОНД РЕНОВАЦИИ', full: "Фонд реновации", type: "Застройщик" },
 ];
 
 export default function Partners() {
   return (
-    <section id="partners" className="py-20 lg:py-28 bg-[#1A1A1A]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <div className="text-[#50C8E0] text-sm font-semibold uppercase tracking-widest mb-4">
+    <section id="partners" className="py-24 lg:py-32 bg-[#0B0B0B]">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+
+        {/* Header */}
+        <div className="flex items-center gap-4 mb-16">
+          <span className="w-8 h-[1px] bg-[#50C8E0]" />
+          <span className="font-technical text-[#50C8E0] text-xs uppercase tracking-[0.25em]">
             Наши заказчики
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Нам доверяют ведущие{" "}
-            <span className="text-[#50C8E0]">генподрядные организации</span>
-          </h2>
-          <p className="text-white/50 max-w-xl mx-auto">
-            Мы работаем с застройщиками и генподрядными организациями,
-            подтверждая репутацию надёжного партнёра на каждом объекте
-          </p>
+          </span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-          {partners.map((partner, idx) => (
-            <div
-              key={idx}
-              className="bg-white/5 border border-white/10 hover:border-[#50C8E0]/40 hover:bg-white/10 rounded-lg p-5 text-center transition-all group"
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          {/* Left: headline */}
+          <div>
+            <h2
+              className="font-display font-bold text-white leading-none mb-8"
+              style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
             >
-              {/* Logo placeholder */}
-              <div className="w-12 h-12 bg-[#50C8E0]/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-[#50C8E0]/30 transition-colors">
-                <span className="text-[#50C8E0] font-bold text-sm">
-                  {partner.name.slice(0, 2).toUpperCase()}
-                </span>
-              </div>
-              <div className="text-white text-xs font-medium leading-tight mb-1">
-                {partner.name}
-              </div>
-              <div className="text-white/40 text-xs">{partner.type}</div>
-            </div>
-          ))}
-        </div>
+              НАМ ДОВЕРЯЮТ<br />
+              <span className="text-[#50C8E0]">ВЕДУЩИЕ</span><br />
+              ГЕНПОДРЯДЧИКИ
+            </h2>
 
-        {/* Trust quote */}
-        <div className="mt-14 text-center">
-          <blockquote className="text-white/60 text-lg italic max-w-2xl mx-auto">
-            «Долгосрочное сотрудничество строится на качестве работ,
-            соблюдении сроков и честности — именно это мы гарантируем каждому
-            заказчику»
-          </blockquote>
-          <div className="mt-4 text-[#50C8E0] text-sm font-medium">
-            — ООО «Мегастрой»
+            {/* Quote */}
+            <div className="border-l-[3px] border-[#50C8E0] pl-6 mt-10">
+              <p className="font-technical text-white/40 text-sm leading-relaxed italic mb-3">
+                «Долгосрочное сотрудничество строится на качестве работ,
+                соблюдении сроков и честности — именно это мы гарантируем
+                каждому заказчику»
+              </p>
+              <span className="font-technical text-[#50C8E0] text-xs uppercase tracking-[0.2em]">
+                — ООО «Мегастрой»
+              </span>
+            </div>
+          </div>
+
+          {/* Right: partner list */}
+          <div className="space-y-0">
+            {partners.map((partner, idx) => (
+              <div
+                key={idx}
+                className="group flex items-center justify-between py-8 border-b border-white/8 hover:border-[#50C8E0]/30 transition-colors"
+              >
+                <div>
+                  <div
+                    className="font-display font-bold text-white group-hover:text-[#50C8E0] leading-none mb-1 transition-colors"
+                    style={{ fontSize: "clamp(1.2rem, 3vw, 1.8rem)" }}
+                  >
+                    {partner.name}
+                  </div>
+                  <div className="font-technical text-white/30 text-xs uppercase tracking-wider">
+                    {partner.type}
+                  </div>
+                </div>
+                <div className="w-8 h-[1px] bg-white/15 group-hover:bg-[#50C8E0] group-hover:w-12 transition-all duration-300" />
+              </div>
+            ))}
+
+            {/* CTA to partner */}
+            <div className="pt-8">
+              <a
+                href="#contacts"
+                className="inline-flex items-center gap-3 font-technical text-white/40 hover:text-[#50C8E0] text-xs uppercase tracking-[0.2em] transition-colors"
+              >
+                Стать заказчиком
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>

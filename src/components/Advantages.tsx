@@ -1,87 +1,88 @@
 const advantages = [
   {
     title: "Работаем с 2018 года",
-    desc: "Более 6 лет успешной работы на строительном рынке. Накопленный опыт позволяет нам эффективно решать задачи любой сложности.",
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-      </svg>
-    ),
+    desc: "Более 6 лет успешной работы на строительном рынке. Накопленный опыт позволяет эффективно решать задачи любой сложности.",
   },
   {
     title: "Опыт с крупными объектами",
-    desc: "Реализовали строительные проекты на объектах жилой застройки площадью от 10 000 кв.м. Знаем специфику крупных строительных процессов.",
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-      </svg>
-    ),
+    desc: "Реализовали проекты на объектах жилой застройки от 10 000 кв.м. Знаем специфику крупного строительного производства.",
   },
   {
     title: "Строгое соблюдение сроков",
-    desc: "Своевременная сдача работ — один из главных принципов компании. Мы разрабатываем реалистичные графики и неукоснительно их соблюдаем.",
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
+    desc: "Своевременная сдача — один из главных принципов компании. Разрабатываем реалистичные графики и неукоснительно их выполняем.",
   },
   {
-    title: "Контроль качества",
-    desc: "Многоуровневый контроль на каждом этапе работ. Соответствие СНиП, ГОСТ и проектной документации — обязательное условие для нашей команды.",
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
+    title: "Многоуровневый контроль качества",
+    desc: "Контроль на каждом этапе работ. Соответствие СНиП, ГОСТ и проектной документации — обязательное условие для нашей команды.",
   },
   {
-    title: "Работа по договору",
-    desc: "Официальное оформление всех договорённостей. Чёткие условия оплаты, прозрачная смета, юридическая защита интересов заказчика.",
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-      </svg>
-    ),
+    title: "Работа только по договору",
+    desc: "Официальное оформление всех договорённостей. Чёткие условия оплаты, прозрачная смета, юридическая защита заказчика.",
   },
   {
     title: "Профессиональная команда",
-    desc: "Квалифицированные специалисты с многолетним опытом в строительстве. Постоянный состав бригад обеспечивает слаженную и качественную работу.",
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
+    desc: "Квалифицированные специалисты с многолетним опытом. Постоянный состав бригад обеспечивает слаженную и качественную работу.",
   },
 ];
 
 export default function Advantages() {
   return (
-    <section id="advantages" className="py-20 lg:py-28 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <div className="text-[#50C8E0] text-sm font-semibold uppercase tracking-widest mb-4">
-            Наши преимущества
+    <section id="advantages" className="py-24 lg:py-32 bg-[#ECEAE5]">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+
+        {/* Header */}
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-0 border-b border-[#C9C6BF] pb-8">
+          <div>
+            <div className="flex items-center gap-4 mb-4">
+              <span className="w-8 h-[1px] bg-[#0B0B0B]" />
+              <span className="font-technical text-[#6A6A6A] text-xs uppercase tracking-[0.25em]">
+                Наши преимущества
+              </span>
+            </div>
+            <h2
+              className="font-display font-bold text-[#0B0B0B] leading-none"
+              style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
+            >
+              ПОЧЕМУ ВЫБИРАЮТ<br />
+              <span className="text-[#50C8E0]">МЕГАСТРОЙ</span>
+            </h2>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-4">
-            Почему выбирают Мегастрой
-          </h2>
-          <p className="text-[#6B7280] max-w-xl mx-auto">
-            Наши принципы работы обеспечивают доверие со стороны застройщиков и
-            генподрядных организаций
+          <p className="font-technical text-[#6A6A6A] text-sm max-w-xs leading-relaxed">
+            Принципы работы, которые обеспечивают доверие застройщиков
+            и генподрядных организаций
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Advantages grid — ruled rows */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3">
           {advantages.map((item, idx) => (
             <div
               key={idx}
-              className="relative p-6 rounded-lg border border-[#E5E7EB] hover:border-[#1A1A1A]/20 hover:shadow-md transition-all group"
+              className="group border-b border-r border-[#C9C6BF] p-8 hover:bg-[#0B0B0B] transition-colors duration-300
+                [&:nth-child(2n)]:border-r-0 lg:[&:nth-child(2n)]:border-r
+                lg:[&:nth-child(3n)]:border-r-0
+                [&:nth-last-child(-n+2)]:border-b-0 lg:[&:nth-last-child(-n+3)]:border-b-0"
             >
-              <div className="absolute top-0 left-0 w-1 h-full bg-transparent group-hover:bg-[#50C8E0] rounded-l-lg transition-colors" />
-              <div className="text-[#50C8E0] mb-4">{item.icon}</div>
-              <h3 className="font-bold text-[#1A1A1A] mb-2">{item.title}</h3>
-              <p className="text-[#6B7280] text-sm leading-relaxed">{item.desc}</p>
+              {/* Number */}
+              <div className="font-display font-bold text-[#C9C6BF] group-hover:text-[#50C8E0]/20 text-5xl leading-none mb-4 transition-colors">
+                {String(idx + 1).padStart(2, "0")}
+              </div>
+
+              {/* Title */}
+              <h3
+                className="font-display font-bold text-[#0B0B0B] group-hover:text-white leading-tight mb-3 transition-colors"
+                style={{ fontSize: "clamp(1.1rem, 2vw, 1.4rem)" }}
+              >
+                {item.title}
+              </h3>
+
+              {/* Divider */}
+              <div className="w-6 h-[2px] bg-[#50C8E0] mb-4" />
+
+              {/* Description */}
+              <p className="font-technical text-[#6A6A6A] group-hover:text-white/50 text-sm leading-relaxed transition-colors">
+                {item.desc}
+              </p>
             </div>
           ))}
         </div>
