@@ -1,8 +1,12 @@
 const partners = [
-  { name: 'РЕГИОНЖИЛСТРОЙ', full: 'ООО "РЕГИОНЖИЛСТРОЙ"', type: "Генподрядная организация" },
-  { name: 'КРОСТ', full: 'ООО "Крост"', type: "Генподрядная организация" },
-  { name: 'КВАДРО', full: 'ООО "Квадро"', type: "Подрядчик" },
-  { name: 'ФОНД РЕНОВАЦИИ', full: "Фонд реновации", type: "Застройщик" },
+  { name: 'СУ-155', full: 'ЗАО «СУ-155»', type: "Генподрядная организация" },
+  { name: 'СПК МОСЭНЕРГОСТРОЙ', full: 'ОАО «СПК МОСЭНЕРГОСТРОЙ»', type: "Генподрядная организация" },
+  { name: 'РОСАТОМ', full: 'Госкорпорация «Росатом»', type: "Государственная корпорация" },
+  { name: 'IKEA', full: '«IKEA» (Тёплый Стан)', type: "Международная сеть" },
+  { name: 'ПАБЛИСИТИ-БИЛДИНГ', full: 'ООО «Паблисити-Билдинг»', type: "Генподрядная организация" },
+  { name: 'РЕГИОНЖИЛСТРОЙ', full: 'ООО «РЕГИОНЖИЛСТРОЙ»', type: "Генподрядная организация" },
+  { name: 'КРОСТ', full: 'ООО «КРОСТ»', type: "Генподрядная организация" },
+  { name: 'КВАДРО', full: 'ООО «КВАДРО»', type: "Подрядная организация" },
 ];
 
 export default function Partners() {
@@ -26,8 +30,8 @@ export default function Partners() {
               style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
             >
               НАМ ДОВЕРЯЮТ<br />
-              <span className="text-[#50C8E0]">ВЕДУЩИЕ</span><br />
-              ГЕНПОДРЯДЧИКИ
+              <span className="text-[#50C8E0]">КРУПНЕЙШИЕ</span><br />
+              КОМПАНИИ
             </h2>
 
             {/* Quote */}
@@ -48,12 +52,12 @@ export default function Partners() {
             {partners.map((partner, idx) => (
               <div
                 key={idx}
-                className="group flex items-center justify-between py-8 border-b border-white/8 hover:border-[#50C8E0]/30 transition-colors"
+                className="group flex items-center justify-between gap-4 py-6 sm:py-8 border-b border-white/8 hover:border-[#50C8E0]/30 transition-colors"
               >
-                <div>
+                <div className="min-w-0">
                   <div
-                    className="font-display font-bold text-white group-hover:text-[#50C8E0] leading-none mb-1 transition-colors"
-                    style={{ fontSize: "clamp(1.2rem, 3vw, 1.8rem)" }}
+                    className="font-display font-bold text-white group-hover:text-[#50C8E0] leading-tight mb-1 transition-colors break-words"
+                    style={{ fontSize: "clamp(1rem, 3vw, 1.8rem)" }}
                   >
                     {partner.name}
                   </div>
@@ -61,7 +65,7 @@ export default function Partners() {
                     {partner.type}
                   </div>
                 </div>
-                <div className="w-8 h-[1px] bg-white/15 group-hover:bg-[#50C8E0] group-hover:w-12 transition-all duration-300" />
+                <div className="shrink-0 w-8 h-[1px] bg-white/15 group-hover:bg-[#50C8E0] group-hover:w-12 transition-all duration-300" />
               </div>
             ))}
 

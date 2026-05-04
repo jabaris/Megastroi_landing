@@ -1,154 +1,145 @@
+import Image from "next/image";
+
 const projects = [
   {
-    name: "ЖК «Северный квартал»",
-    address: "Корпуса 1–4, секции А–Г",
-    type: "Кладочные работы",
-    area: "28 000 м²",
+    num: "01",
+    client: "ЗАО «СУ-155»",
+    desc: "Выполняли электромонтажные и инженерно-сантехнические работы",
+    type: "Электромонтажные и сантехнические работы",
+    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
   },
   {
-    name: "ЖК «Greenpark»",
-    address: "1-й пусковой комплекс",
-    type: "Отделочные работы",
-    area: "14 500 м²",
+    num: "02",
+    client: "ОАО «СПК МОСЭНЕРГОСТРОЙ»",
+    desc: "Осуществляли инженерно-сантехнические работы на объектах компании",
+    type: "Инженерно-сантехнические работы",
+    image: "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&w=800&q=80",
   },
   {
-    name: "МФК «Центральный»",
-    address: "Офисный блок, этажи 1–12",
-    type: "Внутренние работы",
-    area: "9 800 м²",
+    num: "03",
+    client: "Госкорпорация «Росатом»",
+    desc: "Проводили реконструкцию архивных помещений",
+    type: "Реконструкция",
+    image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80",
   },
   {
-    name: "ЖК «Солнечный»",
-    address: "Корпуса 5–8",
-    type: "Кладочные работы",
-    area: "32 000 м²",
+    num: "04",
+    client: "«IKEA» (Тёплый Стан)",
+    desc: "Выполняли капитальный ремонт металлоконструкций на объекте",
+    type: "Капитальный ремонт",
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
   },
   {
-    name: "ЖК «Западный берег»",
-    address: "Блок-секция 3",
-    type: "Отделочные работы",
-    area: "11 200 м²",
+    num: "05",
+    client: "ООО «Паблисити-Билдинг»",
+    desc: "Реализовывали проекты по благоустройству территорий",
+    type: "Благоустройство",
+    image: "https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=800&q=80",
   },
   {
-    name: "Производственный комплекс",
-    address: "Складская зона, корпус 2",
-    type: "Подготовительные работы",
-    area: "6 400 м²",
-  },
-  {
-    name: "ЖК «Берёзовая роща»",
-    address: "1-я очередь, корпуса 1–3",
-    type: "Кладочные работы",
-    area: "19 700 м²",
-  },
-  {
-    name: "Торговый центр «Меридиан»",
-    address: "Торговая галерея, уровни 1–3",
-    type: "Отделочные работы",
-    area: "8 300 м²",
+    num: "06",
+    client: "ООО «РЕГИОНЖИЛСТРОЙ», ООО «КРОСТ», ООО «КВАДРО»",
+    desc: "Выполняли кладочные и отделочные работы",
+    type: "Кладочные и отделочные работы",
+    image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
-const typeColors: Record<string, string> = {
-  "Кладочные работы": "bg-[#50C8E0]/10 text-[#50C8E0]",
-  "Отделочные работы": "bg-blue-50 text-blue-600",
-  "Внутренние работы": "bg-green-50 text-green-600",
-  "Подготовительные работы": "bg-purple-50 text-purple-600",
-};
-
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 lg:py-28 bg-[#F5F6F8]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <div className="text-[#50C8E0] text-sm font-semibold uppercase tracking-widest mb-4">
-            Реализованные объекты
+    <section id="projects" className="py-24 lg:py-32 bg-[#0B0B0B]">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+
+        {/* Header */}
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-16 border-b border-white/10 pb-8">
+          <div>
+            <div className="flex items-center gap-4 mb-4">
+              <span className="w-8 h-[1px] bg-[#50C8E0]" />
+              <span className="font-technical text-[#50C8E0] text-xs uppercase tracking-[0.25em]">
+                Реализованные проекты
+              </span>
+            </div>
+            <h2
+              className="font-display font-bold text-white leading-none"
+              style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
+            >
+              НАШ ОПЫТ —<br />
+              <span className="text-[#50C8E0]">ВАША УВЕРЕННОСТЬ</span>
+            </h2>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-4">
-            Наши объекты
-          </h2>
-          <p className="text-[#6B7280] max-w-xl mx-auto">
-            Успешно реализованные строительные проекты в жилом и коммерческом сегменте
+          <p className="font-technical text-white/40 text-sm max-w-xs leading-relaxed">
+            За годы работы мы успешно реализовали широкий спектр проектов
+            для государственных структур и крупных компаний
           </p>
         </div>
 
-        {/* Desktop table */}
-        <div className="hidden md:block bg-white rounded-lg border border-[#E5E7EB] overflow-hidden shadow-sm">
-          <table className="w-full">
-            <thead>
-              <tr className="bg-[#1A1A1A] text-white text-sm">
-                <th className="text-left px-6 py-4 font-semibold">Объект</th>
-                <th className="text-left px-6 py-4 font-semibold">Адрес / Описание</th>
-                <th className="text-left px-6 py-4 font-semibold">Вид работ</th>
-                <th className="text-right px-6 py-4 font-semibold">Площадь</th>
-              </tr>
-            </thead>
-            <tbody>
-              {projects.map((project, idx) => (
-                <tr
-                  key={idx}
-                  className={`border-t border-[#E5E7EB] hover:bg-[#F5F6F8] transition-colors ${
-                    idx % 2 === 0 ? "bg-white" : "bg-[#FAFAFA]"
-                  }`}
-                >
-                  <td className="px-6 py-4">
-                    <span className="font-semibold text-[#1A1A1A] text-sm">
-                      {project.name}
-                    </span>
-                  </td>
-                  <td className="px-6 py-4 text-[#6B7280] text-sm">
-                    {project.address}
-                  </td>
-                  <td className="px-6 py-4">
-                    <span
-                      className={`inline-flex px-2.5 py-1 rounded text-xs font-medium ${
-                        typeColors[project.type] || "bg-gray-100 text-gray-600"
-                      }`}
-                    >
-                      {project.type}
-                    </span>
-                  </td>
-                  <td className="px-6 py-4 text-right">
-                    <span className="text-[#1A1A1A] font-medium text-sm">
-                      {project.area}
-                    </span>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
-        {/* Mobile cards */}
-        <div className="md:hidden space-y-4">
+        {/* Projects grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-0">
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-lg border border-[#E5E7EB] p-5"
+              className="group border border-white/8 hover:border-[#50C8E0]/40 transition-colors relative overflow-hidden"
             >
-              <div className="flex items-start justify-between mb-2">
-                <h3 className="font-semibold text-[#1A1A1A] text-sm leading-tight">
-                  {project.name}
+              {/* Photo thumbnail */}
+              <div className="relative h-44 sm:h-48 overflow-hidden">
+                <Image
+                  src={project.image}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  alt={project.client}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                {/* Dark overlay */}
+                <div className="absolute inset-0 bg-[#0B0B0B]/50 group-hover:bg-[#0B0B0B]/35 transition-colors duration-500" />
+                {/* Bottom gradient into card */}
+                <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#0B0B0B] to-transparent" />
+                {/* Number badge */}
+                <div className="absolute top-4 left-4 font-technical text-[#50C8E0] text-xs font-bold uppercase tracking-[0.2em] bg-[#0B0B0B]/70 px-2.5 py-1 backdrop-blur-sm">
+                  {project.num}
+                </div>
+              </div>
+
+              {/* Card content */}
+              <div className="p-6">
+                {/* Client */}
+                <h3
+                  className="font-display font-bold text-white leading-tight mb-3"
+                  style={{ fontSize: "clamp(1rem, 2vw, 1.25rem)" }}
+                >
+                  {project.client}
                 </h3>
-                <span className="text-[#1A1A1A] font-medium text-xs ml-3 shrink-0">
-                  {project.area}
+
+                <div className="w-8 h-[2px] bg-[#50C8E0] mb-3 group-hover:w-16 transition-all duration-300" />
+
+                {/* Description */}
+                <p className="font-technical text-white/40 text-sm leading-relaxed mb-4">
+                  {project.desc}
+                </p>
+
+                {/* Type badge */}
+                <span className="font-technical text-white/30 text-xs uppercase tracking-wider border border-white/10 px-3 py-1">
+                  {project.type}
                 </span>
               </div>
-              <p className="text-[#6B7280] text-xs mb-3">{project.address}</p>
-              <span
-                className={`inline-flex px-2.5 py-1 rounded text-xs font-medium ${
-                  typeColors[project.type] || "bg-gray-100 text-gray-600"
-                }`}
-              >
-                {project.type}
-              </span>
             </div>
           ))}
         </div>
 
-        <p className="text-center text-[#6B7280] text-sm mt-8">
-          Полный перечень объектов — по запросу
-        </p>
+        {/* Bottom note */}
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <p className="font-technical text-white/25 text-xs uppercase tracking-[0.15em]">
+            Полный перечень объектов — по запросу
+          </p>
+          <a
+            href="#contacts"
+            className="inline-flex items-center gap-2 font-technical text-[#50C8E0] text-xs uppercase tracking-[0.15em] border-b border-[#50C8E0]/40 hover:border-[#50C8E0] pb-0.5 transition-colors whitespace-nowrap"
+          >
+            Обсудить ваш проект
+            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
   );

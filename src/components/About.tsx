@@ -1,16 +1,18 @@
+import Image from "next/image";
+
 export default function About() {
   const points = [
-    "Опыт работы с крупными объектами жилой застройки",
-    "Полное соблюдение проектной документации и норм",
-    "Ориентация на долгосрочное партнёрство",
-    "Постоянный состав квалифицированных бригад",
+    "Опыт генерального подрядчика на объектах «IKEA» и «Росатом»",
+    "Реализация проектов любой сложности — от квартир до промышленных объектов",
+    "Индивидуальный подход к каждому проекту и нестандартным задачам",
+    "Отлаженная система коммуникаций и согласованности действий",
   ];
 
   const stats = [
-    { value: "2018", label: "Год основания", sub: "работаем на рынке" },
-    { value: "50+", label: "Объектов", sub: "жилая и коммерческая" },
-    { value: "100%", label: "По договору", sub: "прозрачные условия" },
-    { value: "0", label: "Срывов сроков", sub: "гарантия пунктуальности" },
+    { value: "2009", label: "Год основания", sub: "успешно работаем на рынке" },
+    { value: "100+", label: "Проектов", sub: "различной сложности" },
+    { value: "50+", label: "Специалистов", sub: "в профессиональной команде" },
+    { value: "8", label: "Крупных заказчиков", sub: "доверие проверенное временем" },
   ];
 
   return (
@@ -40,14 +42,14 @@ export default function About() {
             <div className="w-12 h-[3px] bg-[#50C8E0] mb-8" />
 
             <p className="font-technical text-[#6A6A6A] text-sm leading-relaxed mb-5">
-              ООО «Мегастрой» специализируется на кладочных и отделочных работах.
-              С 2018 года выступаем надёжным субподрядчиком для застройщиков
-              и генподрядных организаций Москвы и Подмосковья.
+              Строительная компания «Мегастрой» предлагает профессиональные услуги
+              в сфере строительных работ. Мы успешно работаем на рынке с 2009 года
+              и за это время зарекомендовали себя как надёжный и ответственный подрядчик.
             </p>
             <p className="font-technical text-[#6A6A6A] text-sm leading-relaxed mb-10">
-              Наши объекты — жилая застройка и коммерческая недвижимость.
-              Ориентируемся на долгосрочное сотрудничество, строгое соблюдение
-              договорных обязательств и стандартов качества.
+              За годы работы мы сотрудничали с такими крупными компаниями, как ЗАО «СУ-155»,
+              ОАО «СПК МОСЭНЕРГОСТРОЙ», Госкорпорация «Росатом», «IKEA» (Тёплый Стан),
+              ООО «Паблисити-Билдинг», ООО «РЕГИОНЖИЛСТРОЙ», ООО «КРОСТ», ООО «КВАДРО».
             </p>
 
             {/* Checklist */}
@@ -66,51 +68,75 @@ export default function About() {
             </div>
           </div>
 
-          {/* Right: stat cards */}
-          <div className="grid grid-cols-2 gap-4">
-            {stats.map((card, idx) => (
-              <div
-                key={idx}
-                className={`p-6 border ${
-                  idx === 0
-                    ? "bg-[#0B0B0B] border-[#0B0B0B]"
-                    : idx === 1
-                    ? "bg-[#50C8E0] border-[#50C8E0]"
-                    : "bg-white border-[#C9C6BF]"
-                }`}
-              >
+          {/* Right: stats + building photo */}
+          <div className="flex flex-col gap-4">
+            {/* Stat cards */}
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+              {stats.map((card, idx) => (
                 <div
-                  className={`font-display font-bold leading-none mb-2 ${
+                  key={idx}
+                  className={`p-4 sm:p-6 border ${
                     idx === 0
-                      ? "text-[#50C8E0]"
+                      ? "bg-[#0B0B0B] border-[#0B0B0B]"
                       : idx === 1
-                      ? "text-[#0B0B0B]"
-                      : "text-[#0B0B0B]"
-                  }`}
-                  style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
-                >
-                  {card.value}
-                </div>
-                <div
-                  className={`font-technical font-bold text-sm uppercase tracking-wider mb-1 ${
-                    idx === 0 ? "text-white" : idx === 1 ? "text-[#0B0B0B]" : "text-[#0B0B0B]"
+                      ? "bg-[#50C8E0] border-[#50C8E0]"
+                      : "bg-white border-[#C9C6BF]"
                   }`}
                 >
-                  {card.label}
+                  <div
+                    className={`font-display font-bold leading-none mb-1 sm:mb-2 ${
+                      idx === 0
+                        ? "text-[#50C8E0]"
+                        : idx === 1
+                        ? "text-[#0B0B0B]"
+                        : "text-[#0B0B0B]"
+                    }`}
+                    style={{ fontSize: "clamp(1.5rem, 4vw, 3rem)" }}
+                  >
+                    {card.value}
+                  </div>
+                  <div
+                    className={`font-technical font-bold text-sm uppercase tracking-wider mb-1 ${
+                      idx === 0 ? "text-white" : idx === 1 ? "text-[#0B0B0B]" : "text-[#0B0B0B]"
+                    }`}
+                  >
+                    {card.label}
+                  </div>
+                  <div
+                    className={`font-technical text-xs leading-relaxed ${
+                      idx === 0
+                        ? "text-white/40"
+                        : idx === 1
+                        ? "text-[#0B0B0B]/60"
+                        : "text-[#6A6A6A]"
+                    }`}
+                  >
+                    {card.sub}
+                  </div>
                 </div>
-                <div
-                  className={`font-technical text-xs leading-relaxed ${
-                    idx === 0
-                      ? "text-white/40"
-                      : idx === 1
-                      ? "text-[#0B0B0B]/60"
-                      : "text-[#6A6A6A]"
-                  }`}
-                >
-                  {card.sub}
-                </div>
+              ))}
+            </div>
+
+            {/* Construction photo */}
+            <div className="relative h-52 sm:h-64 overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=80"
+                fill
+                className="object-cover"
+                alt="Строительный объект Мегастрой"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              {/* Dark overlay */}
+              <div className="absolute inset-0 bg-[#0B0B0B]/30" />
+              {/* Cyan accent line at bottom */}
+              <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[#50C8E0]" />
+              {/* Caption */}
+              <div className="absolute bottom-4 left-4">
+                <span className="font-technical text-white/70 text-xs uppercase tracking-[0.2em] bg-[#0B0B0B]/60 px-3 py-1.5 backdrop-blur-sm">
+                  Качество. Опыт. Результат.
+                </span>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>

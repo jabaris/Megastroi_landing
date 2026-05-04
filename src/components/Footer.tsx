@@ -14,7 +14,7 @@ export default function Footer() {
                 МЕГАСТРОЙ
               </div>
               <div className="font-technical text-white/25 text-xs uppercase tracking-[0.2em] mt-0.5">
-                ООО · Основан 2018 · Москва
+                ООО · Основан 2009 · Москва
               </div>
             </div>
           </div>

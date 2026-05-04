@@ -1,27 +1,40 @@
+import Image from "next/image";
+
 const services = [
   {
     num: "01",
-    title: "Кладочные работы",
-    desc: "Кирпичная и блочная кладка стен, перегородок и несущих конструкций. Работаем с различными материалами в соответствии с проектной документацией.",
-    tags: ["Кирпич", "Газоблок", "Керамоблок"],
+    title: "Инженерно-сантехнические работы",
+    desc: "Монтаж систем водоснабжения, канализации, отопления и вентиляции. Выполняем работы на объектах любой сложности — от жилых домов до промышленных комплексов.",
+    tags: ["Водоснабжение", "Канализация", "Отопление", "Вентиляция"],
+    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80",
   },
   {
     num: "02",
-    title: "Отделочные работы",
-    desc: "Штукатурка, шпаклёвка, облицовка поверхностей. Финишная отделка квартир, офисов и коммерческих помещений под ключ.",
-    tags: ["Штукатурка", "Шпаклёвка", "Облицовка"],
+    title: "Электромонтажные работы",
+    desc: "Монтаж электрических сетей, щитового оборудования, систем освещения и заземления. Работаем в соответствии с ПУЭ и проектной документацией.",
+    tags: ["Электросети", "Щитовое оборудование", "Освещение"],
+    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=80",
   },
   {
     num: "03",
-    title: "Внутренние строительные работы",
-    desc: "Устройство перегородок, монтаж оконных и дверных блоков, заливка стяжки пола, работы по обустройству инженерных систем.",
-    tags: ["Стяжка пола", "Перегородки", "Монтаж блоков"],
+    title: "Кладочные и отделочные работы",
+    desc: "Кирпичная кладка, блочная кладка несущих конструкций и перегородок. Штукатурка, шпаклёвка, облицовка — финишная отделка под ключ.",
+    tags: ["Кирпич", "Газоблок", "Штукатурка", "Шпаклёвка"],
+    image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80",
   },
   {
     num: "04",
-    title: "Подготовка помещений",
-    desc: "Демонтажные работы, выравнивание поверхностей, подготовка оснований под финишную отделку. Строго по технологическим регламентам.",
-    tags: ["Демонтаж", "Выравнивание", "Подготовка"],
+    title: "Благоустройство территорий",
+    desc: "Устройство дорожек, площадок, газонов и малых архитектурных форм. Озеленение и ландшафтное обустройство прилегающих территорий.",
+    tags: ["Дорожки", "Газоны", "Озеленение", "МАФ"],
+    image: "https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    num: "05",
+    title: "Капитальный ремонт и реконструкция",
+    desc: "Комплексный капитальный ремонт и реконструкция объектов любого назначения. Опыт работы на объектах «IKEA», «Росатом» и крупных корпоративных заказчиков.",
+    tags: ["Капремонт", "Реконструкция", "Металлоконструкции"],
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
@@ -63,50 +76,61 @@ export default function Services() {
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="group border border-white/8 hover:border-[#50C8E0]/30 p-8 transition-colors relative overflow-hidden"
+              className="group border border-white/8 hover:border-[#50C8E0]/30 transition-colors relative overflow-hidden"
             >
-              {/* Hover fill */}
-              <div className="absolute inset-0 bg-white/[0.02] opacity-0 group-hover:opacity-100 transition-opacity" />
-
-              {/* Number */}
-              <div
-                className="font-display font-bold text-white/[0.06] leading-none absolute -top-4 right-4 select-none pointer-events-none"
-                style={{ fontSize: "7rem" }}
-              >
-                {service.num}
+              {/* Photo */}
+              <div className="relative h-44 overflow-hidden">
+                <Image
+                  src={service.image}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  alt={service.title}
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-[#0B0B0B]/55 group-hover:bg-[#0B0B0B]/40 transition-colors duration-500" />
+                <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#0B0B0B] to-transparent" />
+                <div className="absolute top-4 left-4 font-technical text-[#50C8E0] text-xs font-bold uppercase tracking-[0.2em] bg-[#0B0B0B]/70 px-2.5 py-1 backdrop-blur-sm">
+                  {service.num}
+                </div>
               </div>
 
-              {/* Cyan number */}
-              <div className="font-technical text-[#50C8E0] text-xs font-bold uppercase tracking-[0.2em] mb-6">
-                {service.num}
-              </div>
+              {/* Content */}
+              <div className="p-6 sm:p-8 relative">
+                {/* Number watermark */}
+                <div
+                  className="font-display font-bold text-white/[0.05] leading-none absolute -top-4 right-4 select-none pointer-events-none"
+                  style={{ fontSize: "7rem" }}
+                >
+                  {service.num}
+                </div>
 
-              {/* Title */}
-              <h3
-                className="font-display font-bold text-white leading-none mb-4"
-                style={{ fontSize: "clamp(1.4rem, 3vw, 2rem)" }}
-              >
-                {service.title}
-              </h3>
+                {/* Title */}
+                <h3
+                  className="font-display font-bold text-white leading-none mb-4"
+                  style={{ fontSize: "clamp(1.2rem, 2.5vw, 1.75rem)" }}
+                >
+                  {service.title}
+                </h3>
 
-              {/* Divider */}
-              <div className="w-8 h-[2px] bg-[#50C8E0] mb-4 group-hover:w-16 transition-all duration-300" />
+                {/* Divider */}
+                <div className="w-8 h-[2px] bg-[#50C8E0] mb-4 group-hover:w-16 transition-all duration-300" />
 
-              {/* Description */}
-              <p className="font-technical text-white/40 text-sm leading-relaxed mb-6">
-                {service.desc}
-              </p>
+                {/* Description */}
+                <p className="font-technical text-white/40 text-sm leading-relaxed mb-6">
+                  {service.desc}
+                </p>
 
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2">
-                {service.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="font-technical text-white/30 text-xs uppercase tracking-wider border border-white/10 px-3 py-1"
-                  >
-                    {tag}
-                  </span>
-                ))}
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2">
+                  {service.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="font-technical text-white/30 text-xs uppercase tracking-wider border border-white/10 px-3 py-1"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
