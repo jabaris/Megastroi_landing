@@ -9,7 +9,7 @@ export default function Hero() {
       {/* Background construction photo — right side on desktop, subtle full on mobile */}
       <div className="absolute inset-0 md:left-[40%]">
         <Image
-          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80"
+          src="/images/hero.jpg"
           fill
           className="object-cover"
           alt=""

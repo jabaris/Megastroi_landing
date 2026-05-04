@@ -120,7 +120,7 @@ export default function About() {
             {/* Construction photo */}
             <div className="relative h-52 sm:h-64 overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=80"
+                src="/images/about.jpg"
                 fill
                 className="object-cover"
                 alt="Строительный объект Мегастрой"
