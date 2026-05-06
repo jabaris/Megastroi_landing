@@ -86,7 +86,7 @@ export default function Header() {
 
           {/* CTA */}
           <a
-            href="mailto:megastroi.pto77@mail.ru"
+            href="mailto:megastroy.official@gmail.com"
             className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 font-technical font-bold text-xs uppercase tracking-[0.1em] transition-all duration-300"
             style={{
               background: "linear-gradient(135deg, #50C8E0 0%, #3BB8D2 100%)",
@@ -148,7 +148,7 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="mailto:megastroi.pto77@mail.ru"
+            href="mailto:megastroy.official@gmail.com"
             onClick={() => setMenuOpen(false)}
             className="block mt-4 text-center px-5 py-3 font-technical font-bold text-xs uppercase tracking-[0.1em]"
             style={{

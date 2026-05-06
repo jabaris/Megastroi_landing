@@ -49,11 +49,11 @@ export default function Contact() {
                 Email
               </div>
               <a
-                href="mailto:megastroi.pto77@mail.ru"
+                href="mailto:megastroy.official@gmail.com"
                 className="font-display font-bold text-white hover:text-[#50C8E0] transition-colors leading-none"
                 style={{ fontSize: "clamp(1rem, 2.5vw, 1.6rem)" }}
               >
-                megastroi.pto77@mail.ru
+                megastroy.official@gmail.com
               </a>
             </div>
 
@@ -84,7 +84,7 @@ export default function Contact() {
             {/* CTA button */}
             <div className="pt-8">
               <a
-                href="mailto:megastroi.pto77@mail.ru"
+                href="mailto:megastroy.official@gmail.com"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-[#50C8E0] hover:bg-[#72D8ED] text-[#0B0B0B] font-technical font-bold text-xs uppercase tracking-[0.15em] transition-colors"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
