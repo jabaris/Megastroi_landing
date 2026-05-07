@@ -14,6 +14,7 @@ export default function Hero() {
           className="object-cover"
           alt=""
           priority
+          sizes="100vw"
         />
         {/* Dark tint */}
         <div className="absolute inset-0 bg-[#0B0B0B]/70 md:bg-[#0B0B0B]/45" />
