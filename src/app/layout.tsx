@@ -1,25 +1,17 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Oswald, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
-const oswald = localFont({
-  src: [
-    { path: "../fonts/oswald-cyrillic.woff2", weight: "400 700" },
-    { path: "../fonts/oswald-latin.woff2", weight: "400 700" },
-  ],
+const oswald = Oswald({
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-oswald",
   display: "swap",
 });
 
-const ibmPlexMono = localFont({
-  src: [
-    { path: "../fonts/ibm-plex-mono-cyrillic-400.woff2", weight: "400" },
-    { path: "../fonts/ibm-plex-mono-latin-400.woff2", weight: "400" },
-    { path: "../fonts/ibm-plex-mono-cyrillic-500.woff2", weight: "500" },
-    { path: "../fonts/ibm-plex-mono-latin-500.woff2", weight: "500" },
-    { path: "../fonts/ibm-plex-mono-cyrillic-700.woff2", weight: "700" },
-    { path: "../fonts/ibm-plex-mono-latin-700.woff2", weight: "700" },
-  ],
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "500", "700"],
   variable: "--font-ibm-mono",
   display: "swap",
 });
