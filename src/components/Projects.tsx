@@ -5,42 +5,36 @@ const projects = [
     client: "ЗАО «СУ-155»",
     desc: "Выполняли электромонтажные и инженерно-сантехнические работы",
     type: "Электромонтажные и сантехнические работы",
-    image: "/images/project-1.webp",
   },
   {
     num: "02",
     client: "ОАО «СПК МОСЭНЕРГОСТРОЙ»",
     desc: "Осуществляли инженерно-сантехнические работы на объектах компании",
     type: "Инженерно-сантехнические работы",
-    image: "/images/project-2.webp",
   },
   {
     num: "03",
     client: "Госкорпорация «Росатом»",
     desc: "Проводили реконструкцию архивных помещений",
     type: "Реконструкция",
-    image: "/images/project-3.webp",
   },
   {
     num: "04",
     client: "«IKEA» (Тёплый Стан)",
     desc: "Выполняли капитальный ремонт металлоконструкций на объекте",
     type: "Капитальный ремонт",
-    image: "/images/project-4.webp",
   },
   {
     num: "05",
     client: "ООО «Паблисити-Билдинг»",
     desc: "Реализовывали проекты по благоустройству территорий",
     type: "Благоустройство",
-    image: "/images/service-4.webp",
   },
   {
     num: "06",
     client: "ООО «РЕГИОНЖИЛСТРОЙ», ООО «КРОСТ», ООО «КВАДРО»",
     desc: "Выполняли кладочные и отделочные работы",
     type: "Кладочные и отделочные работы",
-    image: "/images/project-5.webp",
   },
 ];
 
@@ -79,26 +73,13 @@ export default function Projects() {
               key={idx}
               className="group border border-white/8 hover:border-[#50C8E0]/40 transition-colors relative overflow-hidden"
             >
-              {/* Photo thumbnail */}
-              <div className="relative h-44 sm:h-48 overflow-hidden">
-                <img
-                  src={project.image}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  alt={project.client}
-                  loading="lazy"
-                />
-                {/* Dark overlay */}
-                <div className="absolute inset-0 bg-[#0B0B0B]/50 group-hover:bg-[#0B0B0B]/35 transition-colors duration-500" />
-                {/* Bottom gradient into card */}
-                <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#0B0B0B] to-transparent" />
-                {/* Number badge */}
-                <div className="absolute top-4 left-4 font-technical text-[#50C8E0] text-xs font-bold uppercase tracking-[0.2em] bg-[#0B0B0B]/70 px-2.5 py-1 backdrop-blur-sm">
-                  {project.num}
-                </div>
-              </div>
-
               {/* Card content */}
               <div className="p-6">
+                {/* Number badge */}
+                <div className="font-technical text-[#50C8E0] text-xs font-bold uppercase tracking-[0.2em] mb-4">
+                  {project.num}
+                </div>
+
                 {/* Client */}
                 <h3
                   className="font-display font-bold text-white leading-tight mb-3"

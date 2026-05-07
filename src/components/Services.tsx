@@ -5,35 +5,30 @@ const services = [
     title: "Инженерно-сантехнические работы",
     desc: "Монтаж систем водоснабжения, канализации, отопления и вентиляции. Выполняем работы на объектах любой сложности — от жилых домов до промышленных комплексов.",
     tags: ["Водоснабжение", "Канализация", "Отопление", "Вентиляция"],
-    image: "/images/service-1.webp",
   },
   {
     num: "02",
     title: "Электромонтажные работы",
     desc: "Монтаж электрических сетей, щитового оборудования, систем освещения и заземления. Работаем в соответствии с ПУЭ и проектной документацией.",
     tags: ["Электросети", "Щитовое оборудование", "Освещение"],
-    image: "/images/service-2.webp",
   },
   {
     num: "03",
     title: "Кладочные и отделочные работы",
     desc: "Кирпичная кладка, блочная кладка несущих конструкций и перегородок. Штукатурка, шпаклёвка, облицовка — финишная отделка под ключ.",
     tags: ["Кирпич", "Газоблок", "Штукатурка", "Шпаклёвка"],
-    image: "/images/service-3.webp",
   },
   {
     num: "04",
     title: "Благоустройство территорий",
     desc: "Устройство дорожек, площадок, газонов и малых архитектурных форм. Озеленение и ландшафтное обустройство прилегающих территорий.",
     tags: ["Дорожки", "Газоны", "Озеленение", "МАФ"],
-    image: "/images/service-4.webp",
   },
   {
     num: "05",
     title: "Капитальный ремонт и реконструкция",
     desc: "Комплексный капитальный ремонт и реконструкция объектов любого назначения. Опыт работы на объектах «IKEA», «Росатом» и крупных корпоративных заказчиков.",
     tags: ["Капремонт", "Реконструкция", "Металлоконструкции"],
-    image: "/images/hero.webp",
   },
 ];
 
@@ -77,23 +72,13 @@ export default function Services() {
               key={idx}
               className="group border border-white/8 hover:border-[#50C8E0]/30 transition-colors relative overflow-hidden"
             >
-              {/* Photo */}
-              <div className="relative h-44 overflow-hidden">
-                <img
-                  src={service.image}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  alt={service.title}
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-[#0B0B0B]/55 group-hover:bg-[#0B0B0B]/40 transition-colors duration-500" />
-                <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#0B0B0B] to-transparent" />
-                <div className="absolute top-4 left-4 font-technical text-[#50C8E0] text-xs font-bold uppercase tracking-[0.2em] bg-[#0B0B0B]/70 px-2.5 py-1 backdrop-blur-sm">
-                  {service.num}
-                </div>
-              </div>
-
               {/* Content */}
               <div className="p-6 sm:p-8 relative">
+                {/* Number badge */}
+                <div className="font-technical text-[#50C8E0] text-xs font-bold uppercase tracking-[0.2em] mb-4">
+                  {service.num}
+                </div>
+
                 {/* Number watermark */}
                 <div
                   className="font-display font-bold text-white/[0.05] leading-none absolute -top-4 right-4 select-none pointer-events-none"

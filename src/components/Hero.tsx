@@ -4,22 +4,6 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex flex-col justify-center bg-[#0B0B0B] overflow-hidden"
     >
-      {/* Background construction photo — right side on desktop, subtle full on mobile */}
-      <div className="absolute inset-0 md:left-[40%]">
-        <img
-          src="/images/hero.webp"
-          className="absolute inset-0 w-full h-full object-cover"
-          alt=""
-          loading="eager"
-        />
-        {/* Dark tint */}
-        <div className="absolute inset-0 bg-[#0B0B0B]/70 md:bg-[#0B0B0B]/45" />
-        {/* Left-to-right gradient blending photo into content */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B0B0B] via-[#0B0B0B]/85 to-[#0B0B0B]/20 md:from-[#0B0B0B] md:via-[#0B0B0B]/60 md:to-transparent" />
-        {/* Cyan tint overlay */}
-        <div className="absolute inset-0 bg-[#50C8E0]/[0.03]" />
-      </div>
-
       {/* Blueprint grid */}
       <div
         className="absolute inset-0 opacity-[0.04]"

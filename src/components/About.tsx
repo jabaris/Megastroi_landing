@@ -116,25 +116,6 @@ export default function About() {
               ))}
             </div>
 
-            {/* Construction photo */}
-            <div className="relative h-52 sm:h-64 overflow-hidden">
-              <img
-                src="/images/about.webp"
-                className="absolute inset-0 w-full h-full object-cover"
-                alt="Строительный объект Мегастрой"
-                loading="lazy"
-              />
-              {/* Dark overlay */}
-              <div className="absolute inset-0 bg-[#0B0B0B]/30" />
-              {/* Cyan accent line at bottom */}
-              <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[#50C8E0]" />
-              {/* Caption */}
-              <div className="absolute bottom-4 left-4">
-                <span className="font-technical text-white/70 text-xs uppercase tracking-[0.2em] bg-[#0B0B0B]/60 px-3 py-1.5 backdrop-blur-sm">
-                  Качество. Опыт. Результат.
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
