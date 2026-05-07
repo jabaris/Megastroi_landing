@@ -9,7 +9,7 @@ export default function Hero() {
       {/* Background construction photo — right side on desktop, subtle full on mobile */}
       <div className="absolute inset-0 md:left-[40%]">
         <Image
-          src="/images/hero.jpg"
+          src="/images/hero.webp"
           fill
           className="object-cover"
           alt=""

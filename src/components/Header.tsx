@@ -57,7 +57,7 @@ export default function Header() {
               }}
             >
               <Image
-                src="/logo-v2.png"
+                src="/logo-v2.webp"
                 alt="ООО Мегастрой"
                 width={150}
                 height={40}

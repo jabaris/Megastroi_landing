@@ -120,7 +120,7 @@ export default function About() {
             {/* Construction photo */}
             <div className="relative h-52 sm:h-64 overflow-hidden">
               <Image
-                src="/images/about.jpg"
+                src="/images/about.webp"
                 fill
                 className="object-cover"
                 alt="Строительный объект Мегастрой"
