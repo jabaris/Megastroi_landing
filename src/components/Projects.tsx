@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 const projects = [
   {
@@ -82,12 +81,11 @@ export default function Projects() {
             >
               {/* Photo thumbnail */}
               <div className="relative h-44 sm:h-48 overflow-hidden">
-                <Image
+                <img
                   src={project.image}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   alt={project.client}
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  loading="lazy"
                 />
                 {/* Dark overlay */}
                 <div className="absolute inset-0 bg-[#0B0B0B]/50 group-hover:bg-[#0B0B0B]/35 transition-colors duration-500" />

@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 export default function About() {
   const points = [
@@ -119,12 +118,11 @@ export default function About() {
 
             {/* Construction photo */}
             <div className="relative h-52 sm:h-64 overflow-hidden">
-              <Image
+              <img
                 src="/images/about.webp"
-                fill
-                className="object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
                 alt="Строительный объект Мегастрой"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                loading="lazy"
               />
               {/* Dark overlay */}
               <div className="absolute inset-0 bg-[#0B0B0B]/30" />

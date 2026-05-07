@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -56,13 +55,11 @@ export default function Header() {
                 boxShadow: "0 2px 12px rgba(0,0,0,0.3)",
               }}
             >
-              <Image
+              <img
                 src="/logo-v2.webp"
                 alt="ООО Мегастрой"
-                width={150}
-                height={40}
                 className="h-8 w-auto"
-                priority
+                loading="eager"
               />
             </div>
           </a>

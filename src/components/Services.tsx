@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 const services = [
   {
@@ -80,12 +79,11 @@ export default function Services() {
             >
               {/* Photo */}
               <div className="relative h-44 overflow-hidden">
-                <Image
+                <img
                   src={service.image}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   alt={service.title}
-                  sizes="(max-width: 640px) 100vw, 50vw"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-[#0B0B0B]/55 group-hover:bg-[#0B0B0B]/40 transition-colors duration-500" />
                 <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#0B0B0B] to-transparent" />
