@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import logoSrc from "../../public/logo-v2.webp";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -57,12 +56,10 @@ export default function Header() {
               }}
             >
               <img
-                src={logoSrc.src}
+                src="/logo-v2.webp"
                 alt="ООО Мегастрой"
                 className="h-8 w-auto"
                 loading="eager"
-                width={logoSrc.width}
-                height={logoSrc.height}
               />
             </div>
           </a>
