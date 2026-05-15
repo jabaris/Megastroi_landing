@@ -48,20 +48,11 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#" className="flex items-center group">
-            <div
-              className="px-2 py-1 rounded transition-all duration-300"
-              style={{
-                background: "rgba(255,255,255,0.95)",
-                boxShadow: "0 2px 12px rgba(0,0,0,0.3)",
-              }}
+            <span
+              className="font-technical font-bold text-white text-lg tracking-[0.08em] uppercase transition-all duration-300 group-hover:text-[#50C8E0]"
             >
-              <img
-                src="/logo-v2.png"
-                alt="ООО Мегастрой"
-                className="h-8 w-auto"
-                loading="eager"
-              />
-            </div>
+              Мегастрой
+            </span>
           </a>
 
           {/* Desktop nav */}
